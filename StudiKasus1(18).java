@@ -1,8 +1,8 @@
 import java.util.Scanner;
 class StudiKasus1 {
     public static void main(String[] args) {
-        int hargaPerCup = 18000, jumlahCup, uangBayar, totalHarga;
-        int diskon = 0, totalBayar, kembalian, kurang;
+        int hargaPerCup = 18000, jumlahCup, uangBayar;
+        int totalHarga, diskon = 0, totalBayar, kembalian, kurang;
         Scanner input = new Scanner(System.in);
 
         System.out.print("Masukkan jumlah cup : ");
@@ -10,5 +10,26 @@ class StudiKasus1 {
         System.out.print("Masukkan uang bayar : ");
         uangBayar = input.nextInt();
 
+        totalHarga = jumlahCup * hargaPerCup;
+
+        if (totalHarga >= 100000) {
+            diskon = totalHarga * 10 / 100;
+        }
+
+        totalBayar = totalHarga - diskon;
+
+        System.out.println("Total harga         : Rp " + totalHarga);
+        System.out.println("Diskon              : Rp " + diskon);
+        System.out.println("Total bayar         : Rp " + totalBayar);
+
+        if (uangBayar >= totalBayar) {
+            kembalian = uangBayar - totalBayar;
+            System.out.println("Kembalian       : Rp " + kembalian);
+        } else {
+            kurang = totalBayar - uangBayar;
+            System.out.println("Uang tidak cukup, kurang Rp " + kurang);
+        }
+        
+        input.close();
     }
-}   
+}
