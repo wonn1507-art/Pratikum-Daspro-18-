@@ -4,7 +4,7 @@ NIM : 264107060073
 Kelas : SIB - 1D
 
 
-Hasil Uji Studi Kasus 2 oleh <Resya>
+Hasil Uji Studi Kasus 2 oleh Resya
 
 | No | Jenis    | Dokumen  |     Juara/Dana     |    Output    | Sesuai? |
 |----|----------|----------|--------------------|--------------|---------|
